@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>华科校园生活 - 饮食</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hustBlue: '#00529B', // 华科蓝
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .nav-active {
+      background-color: #00529B;
+      color: white;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans">
+  <!-- 导航栏 -->
+  <nav class="bg-white shadow-md fixed w-full z-10">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <a href="index.html" class="flex items-center text-hustBlue font-bold text-xl">
+          <i class="fa fa-university mr-2"></i>华中科技大学
+        </a>
+        
+        <!-- 桌面导航 -->
+        <div class="hidden md:flex space-x-1">
+          <a href="index.html" class="hover:bg-gray-100 px-4 py-2 rounded">首页</a>
+          <a href="food.html" class="nav-active px-4 py-2 rounded">饮食</a>
+          <a href="sports.html" class="hover:bg-gray-100 px-4 py-2 rounded">运动</a>
+          <a href="study.html" class="hover:bg-gray-100 px-4 py-2 rounded">学习</a>
+          <a href="entertainment.html" class="hover:bg-gray-100 px-4 py-2 rounded">娱乐</a>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <button class="md:hidden text-gray-700" id="menuBtn">
+          <i class="fa fa-bars text-xl"></i>
+        </button>
+      </div>
+      
+      <!-- 移动端导航菜单 -->
+      <div class="md:hidden hidden mt-3" id="mobileMenu">
+        <a href="index.html" class="hover:bg-gray-100 block px-4 py-2 mb-1 rounded">首页</a>
+        <a href="food.html" class="nav-active block px-4 py-2 mb-1 rounded">饮食</a>
+        <a href="sports.html" class="hover:bg-gray-100 block px-4 py-2 mb-1 rounded">运动</a>
+        <a href="study.html" class="hover:bg-gray-100 block px-4 py-2 mb-1 rounded">学习</a>
+        <a href="entertainment.html" class="hover:bg-gray-100 block px-4 py-2 mb-1 rounded">娱乐</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面内容 -->
+  <main class="pt-24 pb-12">
+    <div class="container mx-auto px-4">
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold text-hustBlue mb-2">饮食文化</h1>
+        <p class="text-gray-600">舌尖上的华科，品味各地美食</p>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow p-6 mb-8">
+        <p class="text-gray-700 mb-6">
+          华中科技大学拥有多达10余个学生食堂，分布在东西校区各个区域，提供丰富多样的餐饮选择。从地道的湖北风味到全国各地的特色美食，满足不同口味和需求的师生。
+        </p>
+        
+        <!-- 图片展示 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <img src="https://picsum.photos/id/292/800/600" alt="华科食堂美食" class="w-full h-64 object-cover rounded-lg">
+            <p class="mt-2 text-gray-600 text-center">学生食堂丰富菜品</p>
+          </div>
+          <div>
+            <img src="https://picsum.photos/id/431/800/600" alt="华科特色美食" class="w-full h-64 object-cover rounded-lg">
+            <p class="mt-2 text-gray-600 text-center">地方特色风味小吃</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 食堂推荐 -->
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-xl font-bold text-hustBlue mb-4">热门食堂</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="border p-4 rounded-lg">
+            <h3 class="font-bold">韵苑食堂</h3>
+            <p class="text-sm text-gray-600">东校区热门食堂，早餐种类丰富</p>
+          </div>
+          <div class="border p-4 rounded-lg">
+            <h3 class="font-bold">西一食堂</h3>
+            <p class="text-sm text-gray-600">环境优雅，南北风味齐全</p>
+          </div>
+          <div class="border p-4 rounded-lg">
+            <h3 class="font-bold">百惠园食堂</h3>
+            <p class="text-sm text-gray-600">高端自选，适合聚餐</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="bg-hustBlue text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2025 华中科技大学校园生活网</p>
+      <p class="text-sm opacity-80 mt-2">Designed for HUST</p>
+    </div>
+  </footer>
+
+  <script>
+    // 移动端菜单切换
+    document.getElementById('menuBtn').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

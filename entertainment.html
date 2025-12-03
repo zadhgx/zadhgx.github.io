@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>华科校园生活 - 娱乐</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hustBlue: '#00529B', // 华科蓝
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .nav-active {
+      background-color: #00529B;
+      color: white;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans">
+  <!-- 导航栏 -->
+  <nav class="bg-white shadow-md fixed w-full z-10">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <a href="index.html" class="flex items-center text-hustBlue font-bold text-xl">
+          <i class="fa fa-university mr-2"></i>华中科技大学
+        </a>
+        
+        <!-- 桌面导航 -->
+        <div class="hidden md:flex space-x-1">
+          <a href="index.html" class="hover:bg-gray-100 px-4 py-2 rounded">首页</a>
+          <a href="food.html" class="hover:bg-gray-100 px-4 py-2 rounded">饮食</a>
+          <a href="sports.html" class="hover:bg-gray-100 px-4 py-2 rounded">运动</a>
+          <a href="study.html" class="hover:bg-gray-100 px-4 py-2 rounded">学习</a>
+          <a href="entertainment.html" class="nav-active px-4 py-2 rounded">娱乐</a>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <button class="md:hidden text-gray-700" id="menuBtn">
+          <i class="fa fa-bars text-xl"></i>
+        </button>
+      </div>
+      
+      <!-- 移动端导航菜单 -->
+      <div class="md:hidden hidden mt-3" id="mobileMenu">
+        <a href="index.html" class="hover:bg-gray-100 block px-4 py-2 mb-1 rounded">首页</a>
+        <a href="food.html" class="hover:bg-gray-100 block px-4 py-2 mb-1 rounded">饮食</a>
+        <a href="sports.html" class="hover:bg-gray-100 block px-4 py-2 mb-1 rounded">运动</a>
+        <a href="study.html" class="hover:bg-gray-100 block px-4 py-2 mb-1 rounded">学习</a>
+        <a href="entertainment.html" class="nav-active block px-4 py-2 mb-1 rounded">娱乐</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面内容 -->
+  <main class="pt-24 pb-12">
+    <div class="container mx-auto px-4">
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold text-hustBlue mb-2">课余娱乐</h1>
+        <p class="text-gray-600">多彩校园，青春飞扬</p>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow p-6 mb-8">
+        <p class="text-gray-700 mb-6">
+          华中科技大学的课余生活丰富多彩，拥有百余个学生社团，涵盖文艺、体育、学术、公益等各个领域，定期举办各类文艺活动和校园节日。
+        </p>
+        
+        <!-- 图片展示 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <img src=https://www.hust.edu.cn/__local/5/DC/97/80329163434E410AFAEAE0E0AFC_ADD6C135_16D6D3.jpg            <p class="mt-2 text-gray-600 text-center">丰富的社团活动</p>
+          </div>
+          <div>
+            <img src=https://www.hust.edu.cn/__local/F/83/E7/BAD31D459FA8FF424215AC0C010_8BE1B4F5_101FC1.jpg           <p class="mt-2 text-gray-600 text-center">精彩的文艺演出</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 娱乐分类 -->
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-xl font-bold text-hustBlue mb-4">娱乐项目</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div class="border p-4 rounded-lg">
+            <i class="fa fa-music text-hustBlue text-2xl mb-2"></i>
+            <h3 class="font-bold">文艺活动</h3>
+          </div>
+          <div class="border p-4 rounded-lg">
+            <i class="fa fa-users text-hustBlue text-2xl mb-2"></i>
+            <h3 class="font-bold">社团交流</h3>
+          </div>
+          <div class="border p-4 rounded-lg">
+            <i class="fa fa-film text-hustBlue text-2xl mb-2"></i>
+            <h3 class="font-bold">影视娱乐</h3>
+          </div>
+          <div class="border p-4 rounded-lg">
+            <i class="fa fa-tree text-hustBlue text-2xl mb-2"></i>
+            <h3 class="font-bold">户外休闲</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="bg-hustBlue text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2025 华中科技大学校园生活网</p>
+      <p class="text-sm opacity-80 mt-2">Designed for HUST</p>
+    </div>
+  </footer>
+
+  <script>
+    // 移动端菜单切换
+    document.getElementById('menuBtn').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
